@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rjesus-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/10 13:04:22 by rjesus-d          #+#    #+#             */
+/*   Updated: 2025/07/10 13:04:25 by rjesus-d         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Zombie.hpp"
 
 int main ( void )
@@ -7,7 +19,7 @@ int main ( void )
 	int			N;
 
 	std::cout << "How many zombies in the horde? ";
-    std::getline(std::cin, nbr_zombies);
+	std::getline(std::cin, nbr_zombies);
 	std::stringstream(nbr_zombies) >> N;
 	if (N == 0)
 	{
@@ -25,7 +37,6 @@ int main ( void )
 	std::cout << "You can tell they are hungry:" << std::endl;
     for (int i = 0; i < N; i++)
 		horde[i].announce();
-	//std::cout << "Total = " << nbr_zombies << std::endl;
 	
 	std::cout << std::endl << "Zombies destroyed:" << std::endl;
     delete[] horde;
