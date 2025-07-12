@@ -14,7 +14,7 @@
 # CONFIG                                                                       #
 #==============================================================================#
 
-NAME = loser
+NAME = sed
 
 CXX = c++
 
@@ -26,7 +26,7 @@ RM = rm -rf
 # SOURCE FILES                                                                 #
 #==============================================================================#
 
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp replace.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

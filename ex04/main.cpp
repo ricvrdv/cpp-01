@@ -10,17 +10,45 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fstream>
-#include <string>
-#include <iostream>
+#include "sed.hpp"
 
 int	main(int argc, char **argv)
 {
-	std::string	myText;
+	if (argc != 4)
+	{
+		std::cerr << "Usage: ./sed <filename> <s1> <s2>" << std::endl;
+		return (1);
+	}
 
-	std::ifstream	MyReadFile("test.txt");
-	while (std::getline(MyReadFile, myText))
-		std::cout << myText;
-	MyReadFile.close();
+	std::string	filename = argv[1];
+	std::string	s1 = argv[2];
+	std::string	s2 = argv[3];
+	
+	// READING FILE
+	std::ifstream	inFile(filename.c_str());
+	if (!inFile.is_open())
+	{
+		std::cerr << "Error opening file" << std::endl;
+		return (1);
+	}
+	filename += ".replace";
+	
+	// CREATING NEW FILE.REPLACE
+	std::ofstream	newFile(filename.c_str());
+	if (!newFile.is_open())
+	{
+		std::cerr << "Error creating new file" << std::endl;
+		return (1);
+	}
+	
+	// WRITING TO FILE.REPLACE
+	std::string	line;
+	while (std::getline(inFile, line))
+		newFile << replaceAll(line, s1, s2) << std::endl;
+
+	// CLOSING BOTH FILES
+	inFile.close();
+	newFile.close();
+
 	return (0);
 }
