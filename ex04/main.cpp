@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "sed.hpp"
+#include "antiSed.hpp"
 
 int	main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cerr << "Usage: ./sed <filename> <s1> <s2>" << std::endl;
+		std::cerr << "Usage: ./antiSed <filename> <s1> <s2>" << std::endl;
 		return (1);
 	}
 
