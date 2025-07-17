@@ -9,4 +9,4 @@
 ----
 ✅ Check out [C++ Module 02](https://github.com/ricvrdv/cpp-02)
 
-⏪️ Go back to [C++ Module 00](https://github.com/ricvrdv/cpp-00)
+⏪️ Go back to [C++ Module 00](https://github.com/ricvrdv/cpp-00) - namespaces, classes, member functions, stdio streams, ...
