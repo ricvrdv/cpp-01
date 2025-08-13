@@ -56,7 +56,7 @@ make
 
 # ex04
 
-Developed a text-replacement program that reads a file, replaces all occurrences of a given string with another, and outputs to a `.replace` file without using `std::string::replace()`.`
+Developed a text-replacement program that reads a file, replaces all occurrences of a given string with another, and outputs to a `.replace` file without using `std::string::replace()`.
 
 Usage:
 ```
@@ -68,17 +68,27 @@ make
 
 # ex05
 
-Automated a Harl class to print preset messages based on severity level using pointers to member functions instead of chained conditionals.
+Automated a `Harl` class to print preset messages based on severity level using pointers to member functions instead of chained conditionals.
 
 Usage:
 ```
 make
 ```
 ```
-./antiSed <filename> <string1> <string2>
+./harl
 ```
 
 # ex06
+
+Extended `Harl` with a filter system to display only messages at or above a given severity level, using a `switch` statement for control flow.
+
+Usage:
+```
+make
+```
+```
+./harlFilter <LEVEL>
+```
 
 ----
 ✅ Check out [C++ Module 02](https://github.com/ricvrdv/cpp-02) - function and operator overloading
